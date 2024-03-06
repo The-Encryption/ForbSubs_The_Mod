@@ -12,19 +12,19 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, ForbSubs.MOD_ID);
 
     public static final RegistryObject<Item> CRIMSON_SHARD = ITEMS.register("crimson_shard",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FORBSUBS_TAB)));
 
     public static final RegistryObject<Item> CRIMSON_GEM = ITEMS.register("crimson_gem",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FORBSUBS_TAB)));
 
     public static final RegistryObject<Item> GOLDEN_MEDALLION = ITEMS.register("golden_medallion",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FORBSUBS_TAB)));
 
     public static final RegistryObject<Item> CRIMSON_MEDALLION = ITEMS.register("crimson_medallion",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FORBSUBS_TAB)));
 
     public static final RegistryObject<Item> PESTLE_AND_MORTAR = ITEMS.register("pestle_and_mortar",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FORBSUBS_TAB)));
 
 
     public static void register(IEventBus eventBus) {

@@ -1,6 +1,7 @@
 package com.twc.forbsubs.block;
 
 import com.twc.forbsubs.ForbSubs;
+import com.twc.forbsubs.item.ModCreativeModeTab;
 import com.twc.forbsubs.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,9 +21,9 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, ForbSubs.MOD_ID);
 
     public static final RegistryObject<Block> CRIMSON_FORGE = registerBlock("crimson_forge",
-            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_DECORATIONS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
     public static final RegistryObject<Block> CRIMSON_BOILER = registerBlock("crimson_boiler",
-            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_DECORATIONS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock (String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
