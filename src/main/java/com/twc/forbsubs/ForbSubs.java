@@ -1,6 +1,7 @@
 package com.twc.forbsubs;
 
 import com.mojang.logging.LogUtils;
+import com.twc.forbsubs.block.ModBlocks;
 import com.twc.forbsubs.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -19,7 +20,6 @@ import org.slf4j.Logger;
 
 import java.util.stream.Collectors;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(ForbSubs.MOD_ID)
 public class ForbSubs {
 
@@ -28,10 +28,10 @@ public class ForbSubs {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public ForbSubs() {
-        // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 
