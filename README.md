@@ -21,7 +21,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Mod
 
-This mod was inspired by several other creations, such as Create: Broken Bad 🥽, Alcocraft 🍺, etc., as well as some TV and YT series and my particular interest in chemistry.
+This mod was inspired by several other creations, such as Create: Broken Bad 🥽, Alcocraft 🍺, etc., as well as some TV and YT series and Encryption's particular interest in chemistry.
 LEGAL substances await you 💊!
 
 More details [here](https://app.milanote.com/1RoK7X18EEPFar/fs?p=G0FcgqI7FtW).
@@ -34,13 +34,15 @@ The mod is still in development, so it hasn't been fully released yet. However, 
 <!-- FEATURES -->
 ## Features
 
-Here's what you can find in the mod:
+Here's what the mod has to offer at the moment:
 
 - **Crimson materials**: Find those gems in structures above the Nether roof. You can powder them to make a toxic dust!
 
 - **Revolver**: This weapon is not only useful for combat, it's also useful for gambling! Take turns shooting each other in a game of Russian Roulette.
 
-- **Crimson Boiler**: This block can be used for making alcohol and tobacco. It also happens to be capable of reaching immensely high temperatures, and thus, is quite useful for cooking and smeltig _stuff_.
+- **Crimson Boiler**: This block can be used for making alcohol and tobacco. It also happens to be capable of reaching immensely high temperatures, and thus, is quite useful for cooking and smelting stuff.
+
+- **Crimson Forge**: This block can be used to forge advanced items from the mod, including (planned) armour set materials and Medallions.
 
 
 
@@ -72,6 +74,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 **Discord Server**:
 https://discord.gg/2MUPhvXzna
+**Website:**
+https://encryption-business.ddns.net/
 
 Feel free to join us!
 
