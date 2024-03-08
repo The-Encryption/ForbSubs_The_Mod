@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "forbsubs:block/crimson_forge" },
+    "facing=east": { "model": "forbsubs:block/crimson_forge", "y": 90 },
+    "facing=south": { "model": "forbsubs:block/crimson_forge", "y": 180 },
+    "facing=west": { "model": "forbsubs:block/crimson_forge", "y": 270 }
+  }
+}
