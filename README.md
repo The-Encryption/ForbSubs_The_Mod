@@ -1,6 +1,3 @@
-![Static Badge](https://img.shields.io/badge/-CurseForge-white?style=for-the-badge&logo=curseforge&logoColor=white&color=f16436)
-![Static Badge](https://img.shields.io/badge/-Modrinth-white?style=for-the-badge&logo=modrinth&logoColor=white&color=%231bd96a)
-
 <br />
 <div align="center">
   <a href="https://github.com/The-Encryption/ForbSubs_The_Mod">
@@ -21,8 +18,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Mod
 
-This mod was inspired by several other creations, such as Create: Broken Bad 🥽, Alcocraft 🍺, etc., as well as some TV and YT series and Encryption's particular interest in chemistry.
-LEGAL substances await you 💊!
+This mod was inspired by several other creations, such as Create: Broken Bad, Alcocraft, etc., as well as some TV and YT series and Encryption's particular interest in chemistry. This project is all about forbidden substances, hence the name.
 
 More details [here](https://app.milanote.com/1RoK7X18EEPFar/fs?p=G0FcgqI7FtW).
 
@@ -58,8 +54,8 @@ See the [open issues](https://github.com/The-Encryption/ForbSubs_The_Mod/issues)
 
 Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion to make this mod better, please create an [issue](https://github.com/The-Encryption/ForbSubs_The_Mod/issues) with the tag "enhancement."
-Don't forget to give the project a star! Thanks again 🤗!
+If you have a suggestion to make this mod better, please create an [issue](https://github.com/The-Encryption/ForbSubs_The_Mod/issues) with the tag "enhancement".
+Don't forget to give the project a star! Thanks again ::)
 
 
 
@@ -74,6 +70,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 **Discord Server**:
 https://discord.gg/2MUPhvXzna
+
 **Website:**
 https://encryption-business.ddns.net/
 
