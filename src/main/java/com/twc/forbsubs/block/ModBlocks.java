@@ -1,6 +1,7 @@
 package com.twc.forbsubs.block;
 
 import com.twc.forbsubs.ForbSubs;
+import com.twc.forbsubs.block.custom.CrimsonForgeBlock;
 import com.twc.forbsubs.item.ModCreativeModeTab;
 import com.twc.forbsubs.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -21,7 +22,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, ForbSubs.MOD_ID);
 
     public static final RegistryObject<Block> CRIMSON_FORGE = registerBlock("crimson_forge",
-            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
+            () -> new CrimsonForgeBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
     public static final RegistryObject<Block> CRIMSON_BOILER = registerBlock("crimson_boiler",
             () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
 
