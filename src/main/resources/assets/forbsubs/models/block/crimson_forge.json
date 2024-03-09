@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "forbsubs:block/crimson_forge_front",
+    "side": "forbsubs:block/crimson_forge_side",
+    "top": "forbsubs:block/crimson_forge_top",
+    "bottom": "minecraft:block/cracked_polished_blackstone_bricks",
+    "particle": "minecraft:block/cracked_polished_blackstone_bricks"
+  }
+}
