@@ -1,12 +1,16 @@
 package com.twc.forbsubs.screen;
 
 import com.twc.forbsubs.block.ModBlocks;
+import com.twc.forbsubs.block.custom.CrimsonForgeBlock;
 import com.twc.forbsubs.block.entity.custom.CrimsonForgeBlockEntity;
 import com.twc.forbsubs.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.*;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -15,10 +19,9 @@ import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.Nullable;
 
 public class CrimsonForgeMenu extends AbstractContainerMenu {
+
     private final CrimsonForgeBlockEntity blockEntity;
     private final Level level;
-
-
     public CrimsonForgeMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()));
     }
@@ -32,14 +35,13 @@ public class CrimsonForgeMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 0, 0));
-            this.addSlot(new SlotItemHandler(handler, 1, 0, 16));
-            this.addSlot(new SlotItemHandler(handler, 2, 16, 16));
-            this.addSlot(new SlotItemHandler(handler, 3, 32, 16));
-            this.addSlot(new ModResultSlot(handler, 4, 0, 32));
+            this.addSlot(new SlotItemHandler(handler, 0, 44, 53));
+            this.addSlot(new SlotItemHandler(handler, 1, 44, 18));
+            this.addSlot(new SlotItemHandler(handler, 2, 81, 18));
+            this.addSlot(new SlotItemHandler(handler, 3, 117, 18));
+            this.addSlot(new ModResultSlot(handler, 4, 117, 53));
         });
     }
-
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
     // must assign a slot number to each of the slots used by the GUI.

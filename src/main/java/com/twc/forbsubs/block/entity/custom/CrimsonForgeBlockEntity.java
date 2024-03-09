@@ -14,12 +14,8 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.MinecartItem;
-import net.minecraft.world.item.alchemy.PotionUtils;
-import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -46,7 +42,7 @@ public class CrimsonForgeBlockEntity extends BlockEntity implements MenuProvider
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     public CrimsonForgeBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.CRIMSON_FORGE_ENTITY.get(), pPos, pBlockState);
+        super(ModBlockEntities.CRIMSON_FORGE_BLOCK_ENTITY.get(), pPos, pBlockState);
     }
 
     @Override
@@ -56,8 +52,8 @@ public class CrimsonForgeBlockEntity extends BlockEntity implements MenuProvider
 
     @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new CrimsonForgeMenu(pContainerId, pInventory, this);
+    public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
+        return new CrimsonForgeMenu(pContainerId, pPlayerInventory, this);
     }
 
     @Nonnull
@@ -116,7 +112,7 @@ public class CrimsonForgeBlockEntity extends BlockEntity implements MenuProvider
         entity.itemHandler.extractItem(3, 1, false);
 
         entity.itemHandler.setStackInSlot(4, new ItemStack(ModItems.CRIMSON_GEM.get(),
-                entity.itemHandler.getStackInSlot(3).getCount() + 1));
+                entity.itemHandler.getStackInSlot(4).getCount() + 1));
     }
 
     private static boolean hasRecipe(CrimsonForgeBlockEntity entity) {
@@ -131,5 +127,4 @@ public class CrimsonForgeBlockEntity extends BlockEntity implements MenuProvider
     private static boolean hasNotReachedStackLimit(CrimsonForgeBlockEntity entity) {
         return entity.itemHandler.getStackInSlot(4).getCount() < entity.itemHandler.getStackInSlot(4).getMaxStackSize();
     }
-
 }

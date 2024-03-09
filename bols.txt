@@ -1,3 +1,6 @@
 smh my balls
 Mine, too.
+<<<<<<< HEAD
 and mine
+=======
+>>>>>>> origin/master

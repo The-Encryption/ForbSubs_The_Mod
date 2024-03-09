@@ -58,5 +58,9 @@ public class ForbSubs {
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
+    private void clientSetup(final FMLClientSetupEvent event) {
+        MenuScreens.register(ModMenuTypes.CRIMSON_FORGE_MENU.get(), CrimsonForgeScreen::new);
+    }
+
     ;
 }

@@ -11,15 +11,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModMenuTypes {
-
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(ForgeRegistries.CONTAINERS, ForbSubs.MOD_ID);
 
     public static final RegistryObject<MenuType<CrimsonForgeMenu>> CRIMSON_FORGE_MENU =
             registerMenuType(CrimsonForgeMenu::new, "crimson_forge_menu");
 
-    public static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
-                                                                                                String name) {
+    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
+                                                                                                  String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }
 
