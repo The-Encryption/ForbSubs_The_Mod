@@ -1,0 +1,17 @@
+{
+  "type": "forbsubs:ascendant_forging",
+    "ingredients": [
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "forbsubs:crimson_shard"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "output": {
+    "item": "forbsubs:crimson_gem"
+  }
+}
