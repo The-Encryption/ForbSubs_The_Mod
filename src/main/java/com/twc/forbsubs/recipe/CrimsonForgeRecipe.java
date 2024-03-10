@@ -28,9 +28,12 @@ public class CrimsonForgeRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        return recipeItems.get(0).test(pContainer.getItem(1)) &&
-                recipeItems.get(1).test(pContainer.getItem(2)) &&
-                recipeItems.get(2).test(pContainer.getItem(3));
+        for (int i = 0; i < recipeItems.size(); i++) {
+            if (!recipeItems.get(i).test(pContainer.getItem(i + 1))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
