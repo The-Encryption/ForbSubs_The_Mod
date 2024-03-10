@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.twc.forbsubs.block.ModBlocks;
 import com.twc.forbsubs.block.entity.ModBlockEntities;
 import com.twc.forbsubs.item.ModItems;
+import com.twc.forbsubs.recipe.ModRecipes;
 import com.twc.forbsubs.screen.CrimsonForgeScreen;
 import com.twc.forbsubs.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -40,6 +41,8 @@ public class ForbSubs {
 
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+
+        ModRecipes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);

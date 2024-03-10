@@ -1,0 +1,17 @@
+{
+  "type": "forbsubs:ascendant_forging",
+    "ingredients": [
+    {
+      "item": "minecraft:ancient_debris"
+    },
+    {
+      "item": "forbsubs:crimson_shard"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "result": {
+    "item": "forbsubs:crimson_gem"
+  }
+}
