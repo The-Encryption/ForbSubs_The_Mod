@@ -28,7 +28,7 @@ public class CrimsonForgeScreen extends AbstractContainerScreen<CrimsonForgeMenu
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 83, y + 70, 177, 16, 16, menu.getScaledProgress());
+            blit(pPoseStack, x + 81, y + 54, 176, 0, 16, menu.getScaledProgress());
         }
     }
 
