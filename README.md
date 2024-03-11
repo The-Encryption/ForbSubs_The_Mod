@@ -1,13 +1,10 @@
-![Static Badge](https://img.shields.io/badge/-CurseForge-white?style=for-the-badge&logo=curseforge&logoColor=white&color=f16436)
-![Static Badge](https://img.shields.io/badge/-Modrinth-white?style=for-the-badge&logo=modrinth&logoColor=white&color=%231bd96a)
-
 <br />
 <div align="center">
   <a href="https://github.com/The-Encryption/ForbSubs_The_Mod">
     <img src="src/main/resources/forbsubs.png" alt="Logo" width="100%">
   </a>
 
-<h3 align="center">💎 A Minecraft mod about sussy substances and other ~~definitely legal~~ things! ⚗️</h3>
+<h3 align="center">💎 A Minecraft mod about alcohol, drugs, and other things!</h3>
   <p align="center">
     <br />
     <a href="https://github.com/The-Encryption/ForbSubs_The_Mod/issues">Report Bug</a>
@@ -21,14 +18,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Mod
 
-This mod was inspired by several other creations, such as Create: Broken Bad 🥽, Alcocraft 🍺, etc., as well as some TV and YT series and Encryption's particular interest in chemistry.
-LEGAL substances await you 💊!
+This mod was inspired by several other creations, such as Create: Broken Bad, Alcocraft, etc., as well as some TV and YT series, several books, and Encryption's particular interest in chemistry.
 
 More details [here](https://app.milanote.com/1RoK7X18EEPFar/fs?p=G0FcgqI7FtW).
 
 ### Installation
 
-The mod is still in development, so it hasn't been fully released yet. However, pre-releases and betas will be available [here](https://github.com/The-Encryption/ForbSubs_The_Mod/releases).
+The mod is still in development, so it has not been fully released yet. However, pre-releases and betas will be available [here](https://github.com/The-Encryption/ForbSubs_The_Mod/releases).
 
 
 <!-- FEATURES -->
@@ -59,7 +55,9 @@ See the [open issues](https://github.com/The-Encryption/ForbSubs_The_Mod/issues)
 Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion to make this mod better, please create an [issue](https://github.com/The-Encryption/ForbSubs_The_Mod/issues) with the tag "enhancement."
-Don't forget to give the project a star! Thanks again 🤗!
+Don't forget to give the project a star!
+
+Active contributors can receive dedicated items.
 
 
 
