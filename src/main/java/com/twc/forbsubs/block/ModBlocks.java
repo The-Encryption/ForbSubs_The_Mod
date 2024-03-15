@@ -9,6 +9,9 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,7 +26,11 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, ForbSubs.MOD_ID);
 
 
-    //* BLOCKS *//
+    /*
+
+    BLOCKS
+
+    */
 
 
     // Regular blocks //
@@ -33,6 +40,24 @@ public class ModBlocks {
 
     // Special blocks //
 
+    public static final RegistryObject<Block> CRIMSON_BRICK_STAIRS = registerBlock("crimson_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.CRIMSON_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).
+                    strength(9f).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.FORBSUBS_TAB);
+    public static final RegistryObject<Block> CRIMSON_BRICK_SLAB = registerBlock("crimson_brick_slab",
+            () -> new StairBlock(() -> ModBlocks.CRIMSON_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).
+                            strength(9f).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.FORBSUBS_TAB);
+    public static final RegistryObject<Block> CRIMSON_BRICK_WALL = registerBlock("crimson_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).
+                            strength(9f).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.FORBSUBS_TAB);
+    public static final RegistryObject<Block> CRIMSON_BRICK_GATE = registerBlock("crimson_brick_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.STONE).
+                    strength(9f).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.FORBSUBS_TAB);
 
 
     // Block Entities //
@@ -44,7 +69,11 @@ public class ModBlocks {
             ModCreativeModeTab.FORBSUBS_TAB);
 
 
-    //* BLOCKS *//
+    /*
+
+    BLOCKS
+
+    */
 
 
     private static <T extends Block> RegistryObject<T> registerBlock (String name, Supplier<T> block, CreativeModeTab tab) {

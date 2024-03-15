@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "forbsubs:block/crimson_bricks",
+    "top": "forbsubs:block/crimson_bricks",
+    "side": "forbsubs:block/crimson_bricks"
+  }
+}

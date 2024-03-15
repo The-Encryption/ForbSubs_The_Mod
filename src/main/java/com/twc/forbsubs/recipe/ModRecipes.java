@@ -14,6 +14,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<CrimsonForgeRecipe>> CRIMSON_FORGE_SERIALIZER =
             SERIALIZERS.register("ascendant_forging", () -> CrimsonForgeRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<CrimsonBoilerRecipe>> CRIMSON_BOILER_SERIALIZER =
+            SERIALIZERS.register("steaming", () -> CrimsonBoilerRecipe.Serializer.INSTANCE);
+
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
