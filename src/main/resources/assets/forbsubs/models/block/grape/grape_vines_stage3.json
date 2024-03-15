@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "forbsubs:block/grape_vines_stage3"
+  }
+}

@@ -63,7 +63,9 @@ public class ForbSubs {
     private void clientSetup(final FMLClientSetupEvent event) {
         MenuScreens.register(ModMenuTypes.CRIMSON_FORGE_MENU.get(), CrimsonForgeScreen::new);
         MenuScreens.register(ModMenuTypes.CRIMSON_BOILER_MENU.get(), CrimsonBoilerScreen::new);
+
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_BOILER.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAPE_VINES.get(), RenderType.cutout());
     }
 
     ;

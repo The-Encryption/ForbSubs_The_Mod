@@ -3,6 +3,7 @@ package com.twc.forbsubs.block;
 import com.twc.forbsubs.ForbSubs;
 import com.twc.forbsubs.block.custom.CrimsonBoilerBlock;
 import com.twc.forbsubs.block.custom.CrimsonForgeBlock;
+import com.twc.forbsubs.block.custom.GrapeVinesBlock;
 import com.twc.forbsubs.item.ModCreativeModeTab;
 import com.twc.forbsubs.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -62,6 +63,13 @@ public class ModBlocks {
 
     // Block Entities //
 
+    // Crops
+
+    public static final RegistryObject<Block> GRAPE_VINES = registerBlockWithoutBlockItem("grape_vines",
+            () -> new GrapeVinesBlock(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion().strength(1f)));
+
+    // Crops end
+
     public static final RegistryObject<Block> CRIMSON_FORGE = registerBlock("crimson_forge",
             () -> new CrimsonForgeBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
     public static final RegistryObject<Block> CRIMSON_BOILER = registerBlock("crimson_boiler",
@@ -75,6 +83,11 @@ public class ModBlocks {
 
     */
 
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem (String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        return toReturn;
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock (String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

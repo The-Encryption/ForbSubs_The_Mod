@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "age=0": { "model": "forbsubs:block/grape/grape_vines_stage0" },
+    "age=1": { "model": "forbsubs:block/grape/grape_vines_stage1" },
+    "age=2": { "model": "forbsubs:block/grape/grape_vines_stage2" },
+    "age=3": { "model": "forbsubs:block/grape/grape_vines_stage3" },
+    "age=4": { "model": "forbsubs:block/grape/grape_vines_stage4" },
+    "age=5": { "model": "forbsubs:block/grape/grape_vines_stage5" },
+    "age=6": { "model": "forbsubs:block/grape/grape_vines_stage6" }
+  }
+}
