@@ -2,6 +2,7 @@ package com.twc.forbsubs.block.entity;
 
 import com.twc.forbsubs.ForbSubs;
 import com.twc.forbsubs.block.ModBlocks;
+import com.twc.forbsubs.block.entity.custom.CrimsonBoilerBlockEntity;
 import com.twc.forbsubs.block.entity.custom.CrimsonForgeBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -18,6 +19,11 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("crimson_forge_block_entity", () ->
                     BlockEntityType.Builder.of(CrimsonForgeBlockEntity::new,
                             ModBlocks.CRIMSON_FORGE.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CrimsonBoilerBlockEntity>> CRIMSON_BOILER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("crimson_boiler_block_entity", () ->
+                    BlockEntityType.Builder.of(CrimsonBoilerBlockEntity::new,
+                            ModBlocks.CRIMSON_BOILER.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

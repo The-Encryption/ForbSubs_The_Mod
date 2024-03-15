@@ -14,8 +14,16 @@ public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(ForgeRegistries.CONTAINERS, ForbSubs.MOD_ID);
 
+    //* REGISTERING *//
+
     public static final RegistryObject<MenuType<CrimsonForgeMenu>> CRIMSON_FORGE_MENU =
             registerMenuType(CrimsonForgeMenu::new, "crimson_forge_menu");
+
+    public static final RegistryObject<MenuType<CrimsonBoilerMenu>> CRIMSON_BOILER_MENU =
+            registerMenuType(CrimsonBoilerMenu::new, "crimson_boiler_menu");
+
+    //* REGISTERING *//
+
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
                                                                                                   String name) {

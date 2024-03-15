@@ -5,9 +5,12 @@ import com.twc.forbsubs.block.ModBlocks;
 import com.twc.forbsubs.block.entity.ModBlockEntities;
 import com.twc.forbsubs.item.ModItems;
 import com.twc.forbsubs.recipe.ModRecipes;
+import com.twc.forbsubs.screen.CrimsonBoilerScreen;
 import com.twc.forbsubs.screen.CrimsonForgeScreen;
 import com.twc.forbsubs.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -59,6 +62,8 @@ public class ForbSubs {
 
     private void clientSetup(final FMLClientSetupEvent event) {
         MenuScreens.register(ModMenuTypes.CRIMSON_FORGE_MENU.get(), CrimsonForgeScreen::new);
+        MenuScreens.register(ModMenuTypes.CRIMSON_BOILER_MENU.get(), CrimsonBoilerScreen::new);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_BOILER.get(), RenderType.translucent());
     }
 
     ;

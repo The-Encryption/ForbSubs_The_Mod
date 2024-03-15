@@ -1,7 +1,7 @@
 package com.twc.forbsubs.block.custom;
 
 import com.twc.forbsubs.block.entity.ModBlockEntities;
-import com.twc.forbsubs.block.entity.custom.CrimsonForgeBlockEntity;
+import com.twc.forbsubs.block.entity.custom.CrimsonBoilerBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -24,9 +24,11 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
-public class CrimsonForgeBlock extends BaseEntityBlock {
+public class CrimsonBoilerBlock extends BaseEntityBlock {
+
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public CrimsonForgeBlock(Properties properties) {
+
+    public CrimsonBoilerBlock(Properties properties) {
         super(properties);
     }
 
@@ -41,6 +43,7 @@ public class CrimsonForgeBlock extends BaseEntityBlock {
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
     }
+
 
     @Override
     public BlockState rotate(BlockState pState, Rotation pRotation) {
@@ -57,7 +60,6 @@ public class CrimsonForgeBlock extends BaseEntityBlock {
         pBuilder.add(FACING);
     }
 
-
     /* BLOCK ENTITY */
 
     @Override
@@ -69,8 +71,8 @@ public class CrimsonForgeBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof CrimsonForgeBlockEntity) {
-                ((CrimsonForgeBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof CrimsonBoilerBlockEntity) {
+                ((CrimsonBoilerBlockEntity) blockEntity).drops();
             }
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
@@ -81,8 +83,8 @@ public class CrimsonForgeBlock extends BaseEntityBlock {
                                  Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof CrimsonForgeBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (CrimsonForgeBlockEntity)entity, pPos);
+            if(entity instanceof CrimsonBoilerBlockEntity) {
+                NetworkHooks.openGui(((ServerPlayer)pPlayer), (CrimsonBoilerBlockEntity)entity, pPos);
             } else {
                 throw new IllegalStateException("Fuck ya, I ain't got no container provider!");
             }
@@ -94,13 +96,13 @@ public class CrimsonForgeBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new CrimsonForgeBlockEntity(pPos, pState);
+        return new CrimsonBoilerBlockEntity(pPos, pState);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.CRIMSON_FORGE_BLOCK_ENTITY.get(),
-                CrimsonForgeBlockEntity::tick);
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.CRIMSON_BOILER_BLOCK_ENTITY.get(),
+                CrimsonBoilerBlockEntity::tick);
     }
 }

@@ -1,6 +1,7 @@
 package com.twc.forbsubs.block;
 
 import com.twc.forbsubs.ForbSubs;
+import com.twc.forbsubs.block.custom.CrimsonBoilerBlock;
 import com.twc.forbsubs.block.custom.CrimsonForgeBlock;
 import com.twc.forbsubs.item.ModCreativeModeTab;
 import com.twc.forbsubs.item.ModItems;
@@ -21,10 +22,30 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ForbSubs.MOD_ID);
 
+
+    //* BLOCKS *//
+
+
+    // Regular blocks //
+
+    public static final RegistryObject<Block> CRIMSON_BRICKS = registerBlock("crimson_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
+
+    // Special blocks //
+
+
+
+    // Block Entities //
+
     public static final RegistryObject<Block> CRIMSON_FORGE = registerBlock("crimson_forge",
             () -> new CrimsonForgeBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
     public static final RegistryObject<Block> CRIMSON_BOILER = registerBlock("crimson_boiler",
-            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FORBSUBS_TAB);
+            () -> new CrimsonBoilerBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(9f).noOcclusion().requiresCorrectToolForDrops()),
+            ModCreativeModeTab.FORBSUBS_TAB);
+
+
+    //* BLOCKS *//
+
 
     private static <T extends Block> RegistryObject<T> registerBlock (String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

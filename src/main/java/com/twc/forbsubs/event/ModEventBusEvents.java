@@ -1,6 +1,7 @@
 package com.twc.forbsubs.event;
 
 import com.twc.forbsubs.ForbSubs;
+import com.twc.forbsubs.recipe.CrimsonBoilerRecipe;
 import com.twc.forbsubs.recipe.CrimsonForgeRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -14,5 +15,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
         Registry.register(Registry.RECIPE_TYPE, CrimsonForgeRecipe.Type.ID, CrimsonForgeRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, CrimsonBoilerRecipe.Type.ID, CrimsonBoilerRecipe.Type.INSTANCE);
     }
 }

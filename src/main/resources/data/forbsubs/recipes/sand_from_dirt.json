@@ -1,0 +1,11 @@
+{
+  "type": "forbsubs:steaming",
+    "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    }
+  ],
+  "output": {
+    "item": "minecraft:sand"
+  }
+}
